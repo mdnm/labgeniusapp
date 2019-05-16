@@ -1,0 +1,21 @@
+<!--
+  Generated template for the LabclassesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-title >{{cursoTitulo}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div style="height:10px;width:100%;"></div>
+  <ion-list> 
+  <ion-item style="margin-bottom:0.5em;font-size: 16px;font-weight: 600" *ngFor="let aula of aulas" (click)="aulaClick(aula)">
+      <ion-icon style="opacity:0.8" name="school"></ion-icon>&ensp;&nbsp;{{aula.titulo}}
+  </ion-item>
+</ion-list>
+</ion-content>

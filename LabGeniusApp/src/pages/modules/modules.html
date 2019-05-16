@@ -1,0 +1,28 @@
+<!--
+  Generated template for the ModulesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Escolha uma aula</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list style="margin-bottom:0.5em;" *ngFor="let modulo of modulos">
+    <ion-list-header text-justify text-wrap color="lightgray" style="font-size: 16px;font-weight: 600;color:gray">
+        {{modulo.name}} 
+    </ion-list-header>
+    <div *ngFor="let aula of aulas">
+      <ion-item text-justify text-wrap style="font-size: 14px;" *ngFor="let aul of aula" (click)="aulaClick(aul.id_aula, modulo.id)">
+          <div *ngIf="aul.id_modulo==modulo.id" style="font-weight: 600">
+              <ion-icon name="logo-youtube" item-start></ion-icon>{{aul.titulo}}
+          </div>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>

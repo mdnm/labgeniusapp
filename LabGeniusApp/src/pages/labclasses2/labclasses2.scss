@@ -1,0 +1,40 @@
+page-labclasses2 {
+    .dialog{
+        width:100%;
+        display: table;
+        box-sizing: border-box;
+        background: white;
+        padding:20px;
+        border-radius:20px;
+        font-weight: 600;
+        color:dimgray;
+        font-size:12px;
+        box-shadow: 3px 2px 3px -1px rgba(0,0,0,0.17);
+    }
+
+    ion-content{
+        background-color:#d4d4d4;
+    }
+
+    .content-wrapper{
+        width:100%;
+        display: table;
+        margin-bottom:20px;
+    }
+
+    .dialog-cont{
+        width:90%;
+        display: inline-block;
+        box-sizing: border-box;
+        padding-left: 10px;
+    }
+
+    .side-cont{
+        width:10%;
+        display: inline-block;
+        box-sizing: border-box;
+        padding:0px 2px 2px 0px;
+
+    }
+
+}

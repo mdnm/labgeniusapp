@@ -1,0 +1,29 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <img style="height: 40px;position: relative;left:50%;transform: translateX(-50%);opacity:0.6" src="../../assets/imgs/logolab2.png"/>
+  </ion-navbar>
+
+</ion-header>
+ 
+
+<ion-content>
+  <ion-list text-center no-lines padding>
+    <img *ngIf="aluno.profile_pic" src="../../assets/imgs/{{aluno.profile_pic}}">
+    <h4 style="color:rgb(128, 128, 128);font-size:12px;">{{username}}</h4>    
+    <h4 style="font-weight: 700;margin-top:-6px; ">{{aluno.nome | titlecase}} {{aluno.sobrenome | titlecase}}</h4>
+    <h4 style="font-size:13px;margin-top:-6px;">{{aluno.email}}</h4>
+  </ion-list>
+  <button style="margin-top:1.5em;" ion-button full block (click)="presentActionSheet()">
+    Opções
+  </button> 
+  <button color="danger" ion-button full block (click)="logout()">
+    Sair  
+    </button>   
+</ion-content>

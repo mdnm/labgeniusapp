@@ -1,0 +1,23 @@
+<!--
+  Generated template for the ClassesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Escolha uma aula</ion-title>
+  </ion-navbar>
+
+</ion-header>
+ 
+
+<ion-content>
+  <ion-list style="margin-bottom:0.5em;" *ngFor="let aula of aulas" (click)="aulaClick(aula.id_aula)">
+    <ion-list-header text-justify text-wrap color="gray" style="font-size: 14px;">
+      {{aula.titulo}}
+    </ion-list-header>
+    <ion-item text-justify text-wrap>{{aula.descricao}}</ion-item>
+  </ion-list>
+</ion-content>

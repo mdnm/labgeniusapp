@@ -1,0 +1,31 @@
+<!--
+  Generated template for the LoginAlunoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content padding>
+  <img style="width:40%;" src="../../assets/imgs/logolab.png"/>
+  <h1 style="margin-left:15px;font-weight: 800;opacity: 0.8;font-size: 28px;margin-top: 20px">Bem Vindo</h1>
+  <h3 style="margin-left:15px;font-weight: 600;color:gray;font-size:18px;margin-top:10px">Faça o login para continuar.</h3>
+
+  <ion-list> 
+    <ion-item style="width:95%;margin-right: 10px;background:none;">
+      <ion-label floating style="font-weight: 600">Username</ion-label>
+      <ion-input type="text" style="margin-top:0.5em;" name="usuario" #usuario></ion-input>
+    </ion-item>
+    
+    <ion-item style="width:95%;margin-right: 10px;background:none;"> 
+      <ion-label floating style="font-weight: 600">Senha</ion-label>
+      <ion-input style="margin-top:0.5em;" type="password" name="senha" #senha></ion-input>
+    </ion-item>
+
+    <button style="margin-top:30px;font-weight:700;width:98%;height: 50px;position: relative;left:50%;transform: translateX(-50%)" ion-button  round block (click)="signIn()">
+      ENTRAR
+    </button>
+    
+  </ion-list>
+</ion-content>

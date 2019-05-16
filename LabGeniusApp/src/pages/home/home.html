@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <img style="height: 40px;position: relative;left:50%;transform: translateX(-50%);opacity:0.6" src="../../assets/imgs/logolab2.png"/>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="refresh($event);">
+    <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="Puxe para atualizar">
+    </ion-refresher-content>
+  </ion-refresher>
+  <div>
+    
+    <div *ngIf="!cursos; else elseBlock">
+      <h4 text-center margin-top style="color:lightgray">Puxe para atualizar</h4>
+      <img style="width:30%;opacity: 0.3;position: relative;left:50%;transform: translateX(-50%);margin-top:40px;" src="../../assets/imgs/graduation-cap.png">
+      <h4 text-center margin-top style="opacity: 0.3;padding:0px 30px;font-weight: 600">Você não está ingressado em nenhum curso.</h4>
+    </div>
+    <ng-template #elseBlock><h4 text-center style="font-weight: 700;margin-top: 20px;margin-bottom: 20px;">Meus Cursos</h4></ng-template>
+    <ion-card *ngFor="let curso of cursos" style="margin: 0px 0px 2.5em 0px; width:100%;">
+      <ion-item>
+        <h2 style="font-weight: 700;">{{curso.titulo}}</h2>
+        <button color="danger" style="margin:0px;" ion-button item-end clear icon-only large (click)="sair(curso.id)">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-item>
+        
+      <img src="../../assets/imgs/{{curso.thumbnail}}">
+        
+      <ion-card-content>
+        <p>{{curso.descricao}}</p>
+      </ion-card-content>
+
+      <button ion-button icon-end block clear large (click)="getModulos(curso.id)">
+        <div style="font-weight: 700;">COMEÇAR</div>
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>   
+    </ion-card>
+  </div>
+</ion-content>
